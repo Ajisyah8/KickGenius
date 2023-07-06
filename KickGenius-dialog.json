@@ -1,0 +1,650 @@
+{
+  "intents": [
+    {
+      "intent": "airjodan",
+      "examples": [
+        {
+          "text": "Can you show Air Jordan 1"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "airjordan4",
+      "examples": [
+        {
+          "text": "can you show air jordan 4 ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "best_sneakers",
+      "examples": [
+        {
+          "text": "What best Sneakers ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "care_shoes",
+      "examples": [
+        {
+          "text": "care and clean sneakers"
+        },
+        {
+          "text": "How do care for and clean sneakers?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "diffrent_shoes",
+      "examples": [
+        {
+          "text": "Difference between sports shoes and sneakers"
+        },
+        {
+          "text": "What is the difference between sneakers and regular sports shoes?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "fake_sneakes",
+      "examples": [
+        {
+          "text": "How do you differentiate between genuine and fake sneakers?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "good_Conditions_Sneakers",
+      "examples": [
+        {
+          "text": "How do keep sneakers in good condition and make them last longer?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "size_sneakers",
+      "examples": [
+        {
+          "text": "How do choose the right size for sneakers?"
+        },
+        {
+          "text": "right size sneakers for feet"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "sneakers_price",
+      "examples": [
+        {
+          "text": "What is best Sneakers price ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "sneakers_This_year",
+      "examples": [
+        {
+          "text": "Do you have any sneakers recommendations this year?"
+        },
+        {
+          "text": "recommendations this year"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "sneakers_today",
+      "examples": [
+        {
+          "text": "popular sneakers today"
+        },
+        {
+          "text": "What are the popular sneaker brands today?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "suitable_sneakers",
+      "examples": [
+        {
+          "text": "Are there sneakers suitable for running or specific sports activities?"
+        },
+        {
+          "text": "suitable for running"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "top_sneakers",
+      "examples": [
+        {
+          "text": "can you show top sneakers ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "trend_shoes",
+      "examples": [
+        {
+          "text": "What makes sneakers a fashion trend?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "type_sneakers",
+      "examples": [
+        {
+          "text": "type of sneakers"
+        },
+        {
+          "text": "What are the different types of sneakers available?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Welcome",
+      "examples": [
+        {
+          "text": "Halo"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "Hy"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "what_is_sneakers",
+      "examples": [
+        {
+          "text": "What is Sneakers ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "yeezy",
+      "examples": [
+        {
+          "text": "can you show Adidas Yeezy Boost 350 ?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "airjordan",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Air Jordan 1",
+          "synonyms": [
+            "Air jordan 1"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "top_sneakers",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "\"Nike Air Jordan 1\", \"Adidas Yeezy Boost 350\", \"Air Jordan 4\"",
+          "synonyms": [
+            "sneakers"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "sneakers today",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This recommenda"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Popular sneaker brands today include Nike, Adidas, Puma, Reebok, New Balance, and Converse."
+              },
+              {
+                "text": "Some popular sneaker brands today include Adidas, Nike, Puma, Jordan, Converse, Vans, New Balance, Reebok, and Under Armour."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#Recommended_sneakers_2020",
+      "dialog_node": "Anything else",
+      "previous_sibling": "Welcome",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "care shoes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "To care for and clean sneakers, you can use a soft brush or cloth to remove dirt and stains. For the upper material, such as leather or canvas, you can use mild soap and water to gently clean the surface. Avoid submerging them in water or using harsh chemicals that may damage the material."
+              },
+              {
+                "text": "To care for and clean sneakers, you can start by gently brushing off any dirt or debris using a soft brush. For materials like leather or synthetic uppers, you can use a mild soap or sneaker cleaner and a damp cloth to wipe away stains. It's important to avoid submerging your sneakers in water and to let them air dry naturally."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#care_shoes",
+      "dialog_node": "node_10_1688216695376",
+      "previous_sibling": "node_3_1688216513699"
+    },
+    {
+      "type": "standard",
+      "title": "sneakers size",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "When choosing the right size for sneakers, it's important to measure your feet accurately and refer to the sizing chart provided by the brand. Consider leaving some wiggle room for your toes and ensuring a comfortable fit without being too tight or too loose.\nYes, there are sneakers designed specifically for running and various sports activities. "
+              },
+              {
+                "text": "To choose the right size for sneakers, it's best to measure your feet using a measuring tape or ruler. Different brands may have slightly different sizing, so referring to their specific size charts is important. Consider leaving a little bit of space (about half an inch) between your toes and the front of the shoe for a comfortable fit."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#size_sneakers",
+      "dialog_node": "node_10_1688217079572",
+      "previous_sibling": "node_4_1688216939708"
+    },
+    {
+      "type": "standard",
+      "title": "suitable running",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Yes, there are sneakers designed specifically for running and various sports activities. These sneakers often have features like cushioning, support, and traction suitable for the specific demands of the sport."
+              },
+              {
+                "text": "Yes, there are sneakers designed specifically for running, as well as for various sports activities such as basketball, tennis, and cross-training. These sneakers often feature specialized cushioning, stability enhancements, and traction patterns to support the specific movements and demands of the activity."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#suitable_sneakers",
+      "dialog_node": "node_1_1688217557076",
+      "previous_sibling": "node_10_1688217079572"
+    },
+    {
+      "type": "standard",
+      "title": "best sneakers",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The \"best\" sneakers can vary depending on personal preference, intended use, and individual needs. However, here are some highly regarded sneaker models that are known for their quality, performance, and popularity:\n\nNike Air Max 90: A classic sneaker known for its iconic design and comfortable Air Max cushioning.\n\nAdidas Ultraboost: Renowned for its responsive Boost cushioning, excellent comfort, and stylish design, the Ultraboost is popular among runners and sneaker enthusiasts.\n\nConverse Chuck Taylor All Star: A timeless and versatile sneaker that has been a favorite for decades, known for its retro style and casual appeal.\n\nNew Balance 990v5: A premium running shoe with exceptional comfort, stability, and durability, favored by both athletes and sneaker aficionados.\n\nVans Old Skool: A skateboarding-inspired sneaker with a distinctive side stripe design, loved for its cool and casual aesthetic.\n\nAir Jordan 1: A legendary basketball sneaker that has transcended the court and become a cultural icon, cherished for its timeless design and rich history.\n\nReebok Classic Leather: A retro sneaker with a clean and minimalistic design, celebrated for its timeless appeal and versatility.\n\nPuma Suede Classic: A stylish and comfortable sneaker featuring a suede upper, loved for its retro vibes and streetwear appeal.\n\nAsics Gel-Lyte III: Known for its split tongue design and superior comfort, this sneaker is a favorite among sneaker enthusiasts and runners alike.\n\nAdidas Stan Smith: A clean and minimalist tennis shoe with a timeless design, appreciated for its simplicity and versatility."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#best_sneakers",
+      "dialog_node": "node_1_1688483285646",
+      "previous_sibling": "node_8_1688485799867"
+    },
+    {
+      "type": "standard",
+      "title": "real or fake",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "To differentiate between genuine and fake sneakers, you can examine the overall quality, craftsmanship, and materials used. Pay attention to details like stitching, logos, and packaging. Buying from authorized retailers or reputable sources can also help ensure authenticity."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#fake_sneakes",
+      "dialog_node": "node_1_1688486618159"
+    },
+    {
+      "type": "standard",
+      "title": "difference_shoes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The main difference between sneakers and regular sports shoes is that sneakers have a more casual and stylish design, while sports shoes are specifically designed for athletic activities, providing specialized features for performance and support."
+              },
+              {
+                "text": "While the line between sneakers and regular sports shoes can be blurry, generally, sneakers have a more casual and fashion-forward design, while regular sports shoes are designed specifically for athletic performance and may prioritize features like stability, cushioning, and support."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#diffrent_shoes",
+      "dialog_node": "node_3_1688216513699",
+      "previous_sibling": "Anything else"
+    },
+    {
+      "type": "standard",
+      "title": "trend sneakers",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sneakers have become a fashion trend due to their versatility, comfort, and ability to complement different styles of outfits. They can be worn with casual, sporty, and even semi-formal attire, making them a popular choice for many fashion-conscious individuals."
+              },
+              {
+                "text": "Sneakers have become a fashion trend due to their versatility and ability to be styled with various outfits. They offer a combination of comfort, functionality, and style, making them a popular choice for both athletes and fashion-conscious individuals. Additionally, collaborations between sneaker brands and high-end fashion designers have further elevated their status in the fashion world."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#trend_shoes",
+      "dialog_node": "node_3_1688482690270",
+      "previous_sibling": "node_6_1688483613643"
+    },
+    {
+      "type": "standard",
+      "title": "type sneakers",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "There are various types of sneakers available, including athletic sneakers for specific sports, lifestyle sneakers for casual wear, high-top sneakers that provide ankle support, and slip-on sneakers for convenience."
+              },
+              {
+                "text": "There is a wide range of sneaker types available, including athletic sneakers for running, basketball, or soccer, lifestyle sneakers for everyday wear, retro sneakers that harken back to older styles, slip-on sneakers for convenience, and high-top sneakers for ankle support.\n\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#type_sneakers",
+      "dialog_node": "node_4_1688216939708",
+      "previous_sibling": "node_10_1688216695376"
+    },
+    {
+      "type": "standard",
+      "title": "airjordan",
+      "output": {
+        "generic": [
+          {
+            "title": "Air Jordan 1",
+            "source": "https://cdn.shopify.com/s/files/1/0684/4315/products/flightskool-air-jordan-1-chicago_7460c338-e779-4697-8c05-9c229642afe5_grande.png?v=1467187824",
+            "description": "",
+            "response_type": "image"
+          }
+        ]
+      },
+      "conditions": "@airjordan && #airjodan",
+      "dialog_node": "node_5_1688484148358",
+      "previous_sibling": "node_7_1688485067717"
+    },
+    {
+      "type": "standard",
+      "title": "sneakers price",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Affordable sneakers from mainstream brands can typically be found in the range of $50 to $150 USD. These are often popular models from well-known brands that offer good quality and style without breaking the bank."
+              },
+              {
+                "text": "Mid-range sneakers from established brands can range from around $150 to $300 USD. These may include signature athlete collaborations, premium materials, or specialized performance features."
+              },
+              {
+                "text": "High-end or designer sneakers can have prices ranging from $300 to several thousand dollars. These sneakers are often associated with luxury brands, limited edition releases, unique designs, and high-quality craftsmanship."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#sneakers_price",
+      "dialog_node": "node_6_1688483613643",
+      "previous_sibling": "node_8_1688486795897"
+    },
+    {
+      "type": "standard",
+      "title": "yeezy",
+      "output": {
+        "generic": [
+          {
+            "title": "Adidas Yeezy Boost 350",
+            "source": "https://i1.wp.com/hypebeast.com/image/2016/09/adidas-originals-yeezy-boost-350-v2-retail-list-01.jpg?quality=95&w=1755",
+            "alt_text": "",
+            "description": "",
+            "response_type": "image"
+          }
+        ]
+      },
+      "conditions": "#yeezy",
+      "dialog_node": "node_6_1688484470369",
+      "previous_sibling": "node_5_1688484148358"
+    },
+    {
+      "type": "standard",
+      "title": "sneakers this year",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here's Your Helpful List of Shoes for the Year :\n1. Nike Air Jordan 1\n2. Adidas Yeezy Boost 350\n3. Air Jordan 4\n4. Nike Dunk Low\n5. New Balance 990"
+              },
+              {
+                "text": "Here's Your Helpful List of Shoes for the Year :\n1. Nike x Patta Air Max 1 Waves\n2. Salmon ACS Pro Advanced\n3. New Balanced x Aime Leon Dore 550\n4. Adidas x Wales Bonner Samba\n5. Nike x Off-White Air Jordan II"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#sneakers_This_year",
+      "dialog_node": "node_7_1688217907481",
+      "previous_sibling": "node_1_1688217557076"
+    },
+    {
+      "type": "standard",
+      "title": "What sneakers",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sneakers, also known as athletic shoes, trainers, or tennis shoes, are a type of footwear designed primarily for sports and physical activities. They are characterized by their comfortable and supportive construction, which includes features such as cushioning, flexibility, and traction. Sneakers typically have rubber soles for better grip and shock absorption, and they often have breathable uppers made from materials like leather, mesh, or synthetic fabrics."
+              },
+              {
+                "text": "Characterized by their comfortable and flexible design, sneakers typically have rubber soles that provide cushioning and traction, making them suitable for various physical activities such as running, walking, playing sports, and exercising. They often feature lightweight and breathable materials like mesh, leather, canvas, or synthetic fabrics to ensure proper airflow and comfort during use."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#what_is_sneakers",
+      "dialog_node": "node_7_1688482897684",
+      "previous_sibling": "node_3_1688482690270"
+    },
+    {
+      "type": "standard",
+      "title": "top sneakers",
+      "output": {
+        "generic": [
+          {
+            "title": "Nike Air Jordan 1",
+            "source": "https://cdn.shopify.com/s/files/1/0684/4315/products/flightskool-air-jordan-1-chicago_7460c338-e779-4697-8c05-9c229642afe5_grande.png?v=1467187824",
+            "alt_text": "",
+            "description": "",
+            "response_type": "image"
+          },
+          {
+            "title": "Air Jordan 4",
+            "source": "https://th.bing.com/th/id/R.7a5b1142d31573c8271cac1d838e56df?rik=HSEveskpqflgTA&riu=http%3a%2f%2fthesource.com%2fwp-content%2fuploads%2f2019%2f04%2fair-jordan-4-bred-2019-6.jpg&ehk=5DhlUj4pxNE5Irc5yAUheAI1uCHvnEC4ElRxW3VCkwc%3d&risl=&pid=ImgRaw&r=0",
+            "description": "",
+            "response_type": "image"
+          },
+          {
+            "title": "Nike Dunk Low",
+            "source": "https://www.kicksonfire.com/wp-content/uploads/2020/03/Nike-Dunk-Low-1.jpg",
+            "description": "",
+            "response_type": "image"
+          },
+          {
+            "title": "New Balance 990",
+            "source": "https://th.bing.com/th/id/R.d0d88ea853d4e5b988b2f33956db9ecf?rik=JlB30BGdH1gy4A&riu=http%3a%2f%2fd3nt9em9l1urz8.cloudfront.net%2fmedia%2fcatalog%2fproduct%2fcache%2f3%2fimage%2f1100x%2f040ec09b1e35df139433887a97daa66f%2fn%2fb%2fnbm990n2-2.jpg&ehk=J5fVGdHahBdLM%2fjQ9BI07X8sLgCMZ%2fu4W1lrvlxuM%2bo%3d&risl=&pid=ImgRaw&r=0",
+            "description": "",
+            "response_type": "image"
+          },
+          {
+            "title": "Adidas Yeezy Boost 350",
+            "source": "https://i1.wp.com/hypebeast.com/image/2016/09/adidas-originals-yeezy-boost-350-v2-retail-list-01.jpg?quality=95&w=1755",
+            "description": "",
+            "response_type": "image"
+          }
+        ]
+      },
+      "conditions": "@top_sneakers && #top_sneakers",
+      "dialog_node": "node_7_1688485067717",
+      "previous_sibling": "node_7_1688217907481"
+    },
+    {
+      "type": "standard",
+      "title": "air jordan 4",
+      "output": {
+        "generic": [
+          {
+            "title": "Air Jordan 4",
+            "source": "https://th.bing.com/th/id/R.7a5b1142d31573c8271cac1d838e56df?rik=HSEveskpqflgTA&riu=http%3a%2f%2fthesource.com%2fwp-content%2fuploads%2f2019%2f04%2fair-jordan-4-bred-2019-6.jpg&ehk=5DhlUj4pxNE5Irc5yAUheAI1uCHvnEC4ElRxW3VCkwc%3d&risl=&pid=ImgRaw&r=0",
+            "description": "",
+            "response_type": "image"
+          }
+        ]
+      },
+      "conditions": "#airjordan4",
+      "dialog_node": "node_8_1688485799867",
+      "previous_sibling": "node_6_1688484470369"
+    },
+    {
+      "type": "standard",
+      "title": "condition sneakers",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "To keep sneakers in good condition and make them last longer, it's essential to store them properly, clean them regularly, and avoid excessive wear in harsh conditions. Additionally, you can use protective sprays or creams to maintain the condition of the materials and consider rotating your sneakers to avoid constant use."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#good_Conditions_Sneakers",
+      "dialog_node": "node_8_1688486795897",
+      "previous_sibling": "node_1_1688486618159"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi Welcome to KickGenius What can i do for you ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Welcome",
+      "dialog_node": "Welcome",
+      "previous_sibling": "node_7_1688482897684"
+    }
+  ],
+  "counterexamples": [],
+  "learning_opt_out": false,
+  "language": "en",
+  "description": "created for assistant 7d5db984-d638-4450-abab-33b87d3bdc7d",
+  "name": "KickGenius-dialog"
+}
