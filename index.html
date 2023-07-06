@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sneakers Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .sneaker {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .sneaker img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        .sneaker h2 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+        
+        .sneaker p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sneakers Collection</h1>
+    
+    <div class="sneaker">
+        <img src="sneaker1.jfif" alt="Sneaker 1">
+        <h2>Nike Air Max 90</h2>
+        <p>The Nike Air Max 90 is a classic sneaker known for its iconic design and comfortable cushioning. It features a leather and mesh upper, visible Air unit in the heel, and a rubber outsole for traction. Available in various colorways.</p>
+    </div>
+    
+    <div class="sneaker">
+        <img src="sneaker2.jpg" alt="Sneaker 2">
+        <h2>Adidas Superstar</h2>
+        <p>The Adidas Superstar is a legendary sneaker that has been popular since the 1970s. It features a classic shell toe design, leather upper, and rubber cupsole. The Superstar is known for its versatile style and has become an iconic sneaker in streetwear culture.</p>
+    </div>
+    
+    <div class="sneaker">
+        <img src="sneaker3.jfif" alt="Sneaker 3">
+        <h2>New Balance 574</h2>
+        <p>The New Balance 574 is a retro-inspired sneaker with a timeless design. It features a suede and mesh upper, ENCAP midsole technology for cushioning and support, and a durable rubber outsole. The 574 offers both comfort and style for everyday wear.</p>
+    </div>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "1e240f52-7e3b-46a7-8b78-543430c2b1b4", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "657ab305-19f7-4a6e-9e12-719dd469e30e", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
